@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b0ec71abd7c12b705c70f9d73ac2b399",
-    "content-hash": "af6b917b9a8eddb4df663169aca4b5db",
+    "hash": "8943adc80355e6dab27b088f79a916b9",
+    "content-hash": "4971b0cdf90d3c2a3d1cf26ecad85240",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -845,12 +845,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "f3002436abeac555104069f4562d284d23d06dab"
+                "reference": "3015f0965b74704362f9b2006646781d4613bcdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/f3002436abeac555104069f4562d284d23d06dab",
-                "reference": "f3002436abeac555104069f4562d284d23d06dab",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/3015f0965b74704362f9b2006646781d4613bcdd",
+                "reference": "3015f0965b74704362f9b2006646781d4613bcdd",
                 "shasum": ""
             },
             "require": {
@@ -914,7 +914,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2016-11-03 15:42:43"
+            "time": "2016-11-08 13:35:42"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1265,6 +1265,45 @@
                 "random"
             ],
             "time": "2016-11-07 23:38:38"
+        },
+        {
+            "name": "pimax/fb-messenger-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pimax/fb-messenger-php.git",
+                "reference": "9c3874404a7b98b3d84ed8a0edcbc7fca8d70c22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pimax/fb-messenger-php/zipball/9c3874404a7b98b3d84ed8a0edcbc7fca8d70c22",
+                "reference": "9c3874404a7b98b3d84ed8a0edcbc7fca8d70c22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pimax\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Pinyugin",
+                    "email": "m.pinyugin@gmail.com",
+                    "homepage": "http://russian-developers.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": " Facebook Messenger Bot PHP API",
+            "homepage": "https://github.com/pimax/fb-messenger-php",
+            "time": "2016-08-22 12:54:31"
         },
         {
             "name": "psr/cache",
@@ -3025,7 +3064,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "friendsofsymfony/user-bundle": 20
+        "friendsofsymfony/user-bundle": 20,
+        "pimax/fb-messenger-php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
