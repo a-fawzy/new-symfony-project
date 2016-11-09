@@ -1,0 +1,13 @@
+{% block user_block %}
+
+    <li class="user-header bg-light-blue">
+        <img style="position: absolute; top: 45%; transform: translate(-50%, -50%);"  src="{{ asset('img/avatar.png') }}" class="img-circle" alt="Avatar">
+        <p>{{ app.user.username }}</p>
+    </li>
+    <li class="user-footer">
+        <div class="pull-right">
+            <a href="{{ path('fos_user_security_logout') }}" class="btn btn-default btn-flat"><i class="fa fa-sign-out fa-fw"></i>{% trans %}logout{% endtrans %}</a>    </div>
+    </li>
+
+
+{% endblock %}

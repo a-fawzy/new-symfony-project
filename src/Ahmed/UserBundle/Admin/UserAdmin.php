@@ -16,22 +16,12 @@ class UserAdmin extends AbstractAdmin {
     protected function configureDatagridFilters(DatagridMapper $datagridMapper) {
         $datagridMapper
                 ->add('username')
-                ->add('usernameCanonical')
                 ->add('email')
-                ->add('emailCanonical')
                 ->add('enabled')
-                ->add('salt')
-                ->add('password')
                 ->add('lastLogin')
                 ->add('locked')
                 ->add('expired')
-                ->add('expiresAt')
-                ->add('confirmationToken')
-                ->add('passwordRequestedAt')
                 ->add('roles')
-                ->add('credentialsExpired')
-                ->add('credentialsExpireAt')
-                ->add('id')
         ;
     }
 
@@ -41,22 +31,12 @@ class UserAdmin extends AbstractAdmin {
     protected function configureListFields(ListMapper $listMapper) {
         $listMapper
                 ->add('username')
-                ->add('usernameCanonical')
                 ->add('email')
-                ->add('emailCanonical')
                 ->add('enabled')
-                ->add('salt')
-                ->add('password')
                 ->add('lastLogin')
                 ->add('locked')
                 ->add('expired')
-                ->add('expiresAt')
-                ->add('confirmationToken')
-                ->add('passwordRequestedAt')
                 ->add('roles')
-                ->add('credentialsExpired')
-                ->add('credentialsExpireAt')
-                ->add('id')
                 ->add('_action', null, array(
                     'actions' => array(
                         'show' => array(),
@@ -71,7 +51,7 @@ class UserAdmin extends AbstractAdmin {
      * @param FormMapper $formMapper
      */
     protected function configureFormFields(FormMapper $formMapper) {
-        $roles = array('ROLE_ADMIN' => 'Admin');
+        $roles = array('Admin' => 'ROLE_ADMIN');
 
         $formMapper
             ->with('General')
@@ -85,9 +65,10 @@ class UserAdmin extends AbstractAdmin {
                     'required' => true,
                     'first_options' => array('label' => 'Password'),
                     'second_options' => array('label' => 'Confirm Password'),
+                    'required' => false
                 ))
-                ->add('enabled', null, array('required' => false))
                 ->add('rolesAsString', 'choice', array('choices' => $roles))
+                ->add('enabled', null, array('required' => false))
                 ->setHelps(array('enabled' => 'Check this to approve user'))
             ->end()
         ;

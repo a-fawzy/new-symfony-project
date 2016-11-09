@@ -12,6 +12,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AhmedAdminBundle:Default:index.html.twig');
+        return $this->redirectToRoute('fos_user_security_login');
     }
 }
