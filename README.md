@@ -1,4 +1,9 @@
 kickstart
 =========
+Ready to use Symfony 3.0 project with integration between FOSUserBundle and SonataAdminBundle.
 
-A Symfony project created on November 8, 2016, 1:18 pm.
+How to use:
+===========
+- Clone the project
+- Get into the new project directory: cd kickstart
+- Change the origin name into upstream: git remote rename origin upstream
