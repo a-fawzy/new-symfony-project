@@ -78,3 +78,29 @@ sonata_block:
         # enable the SonataAdminBundle block
         sonata.admin.block.admin_list:
             contexts: [admin]
+            
+sonata_admin:
+    title: Facebook Messanger
+    title_logo: img/logo.png
+    options:
+        title_mode: single_image
+#    templates:
+#        layout: ObjectsAdminBundle:General:standard_layout.html.twig
+#        user_block: ObjectsAdminBundle:General:user_block.html.twig
+#        search:              SonataAdminBundle:Core:search.html.twig
+#        search_result_block: SonataAdminBundle:Block:block_search_result.html.twig
+
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: top, type: sonata.admin.block.admin_list, settings: { groups: [Management] }, class: col-md-6 }
+#            - { position: top, type: sonata.admin.block.admin_list, settings: { groups: [Reports] }, class: col-md-6 }
+#            - { position: top, type: sonata.admin.block.admin_list, settings: { groups: [Invoice] }, class: "col-md-6 invoice-block" }
+#            - { position: bottom, type: sonata.admin.block.admin_list, settings: { groups: [Gallery] }, class: col-md-12 }
+#            - { position: bottom, type: sonata.admin.block.admin_list, settings: { groups: [Configuration] }, class: col-md-12 }
+
+        groups:
+            Management:
+                items:
+                    - ahmed_user.admin.user
+                roles: [ROLE_ADMIN]
